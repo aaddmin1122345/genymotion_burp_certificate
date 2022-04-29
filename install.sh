@@ -16,11 +16,13 @@ wait_time(){
     done
 }
 
+wait_time 10 "失败的话手动重启到recover,然后挂载system为可读写"
+
 adb devices
 
 wait_time 5 "\033[1;91m5s后开始安装,请确保有adb输出结果\n"
 
-echo -e "\033[1;92m下载证书文件\n"
+echo -e "\033[1;92m下载burp证书文件\n"
 
 mkdir ~/Downloads_tmp
 
